@@ -74,7 +74,7 @@ footer {
       margin: 0;
   }
 
-#produktkort {
+.produktkort {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -82,7 +82,7 @@ footer {
   justify-content: space-between;
 }
 
-#produktkort article {
+.produktkort article {
   max-width: 300px;
   width: 100%;
   min-width: 200px;
