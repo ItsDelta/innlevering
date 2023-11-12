@@ -1,235 +1,111 @@
-.forside {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+/* Setter standard skrifttype for hele nettsiden */
+body {
+  font-family: Arial;
+  background-color: whitesmoke;
+}
+
+/* Definerer et grid-container som inneholder header, main og footer */
+#grid-container {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+}
+
+/* Legger til litt padding til header, main og footer for mellomrom */
+header, main{
+  padding: 0.5rem;
+}
+
+
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #abbaba;
+  color: #000;
+}
+
+/* Styler header-seksjonen */
+header {
+  font-size: 1rem;
+  font-weight: 700;
+  grid-area: header;
+  background-color: #10217c;
+}
+
+h1 {
+  color: black;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+
+main {
+  grid-area: main;
+}
+
+main section img {
+  width: 100%;
+}
+
+/* Styler footer-seksjonen i gridet */
+footer {
+  grid-area: footer;
+}
+
+
+/* Mediestørrelsesregel for skjermer som er bredere enn 600px */
+@media only screen and (min-width: 600px) {
+  /* Endrer grid-malen for bredere skjermer */
+  #grid-container {
+      grid-template-areas: "header header header" "main main main" "footer footer footer";
   }
-  
-  .forside .div {
-    background-color: #ffffff;
-    overflow: hidden;
-    width: 1440px;
-    height: 1024px;
-    position: relative;
+
+  .navbar {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      list-style: none;
+      margin: 0;
   }
-  
-  .forside .overlap {
-    position: absolute;
-    width: 1440px;
-    height: 207px;
-    top: -9px;
-    left: 0;
+
+  /* Styler tjeneste-seksjonen med flexbokser og bakgrunnsfarge */
+#produktkort {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #efefef;
+  justify-content: space-between;
+}
+
+#produktkort article {
+  max-width: 300px;
+  width: 100%;
+  min-width: 200px;
+  border: 3px #00000099 solid;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+  /* Gjør flex-seksjoner som viser bilder og tekst ved siden av hverandre med mellomrom */
+  .produkt {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
   }
-  
-  .forside .rectangle {
-    position: absolute;
-    width: 1440px;
-    height: 117px;
-    top: 0;
-    left: 0;
-    background-color: #10217c;
+
+  .produkt img {
+      width: 50%;
   }
-  
-  .forside .rectangle-2 {
-    position: absolute;
-    width: 1440px;
-    height: 112px;
-    top: 61px;
-    left: 0;
-    background-color: #d9d9d9;
+
+  .produkt section {
+      padding: 1rem;
+      width: 40%;
+      align-self: center;
   }
-  
-  .forside .rectangle-3 {
-    position: absolute;
-    width: 126px;
-    height: 112px;
-    top: 61px;
-    left: 1188px;
-    background-color: #faf4f4;
-    border: 1px solid;
-    border-color: #000000;
-  }
-  
-  .forside .icon-shopping-cart {
-    position: absolute;
-    width: 83px;
-    height: 74px;
-    top: 84px;
-    left: 1209px;
-  }
-  
-  .forside .rectangle-4 {
-    position: absolute;
-    width: 126px;
-    height: 112px;
-    top: 61px;
-    left: 1314px;
-    background-color: #faf4f4;
-    border: 1px solid;
-    border-color: #000000;
-  }
-  
-  .forside .icon-user {
-    position: absolute;
-    width: 81px;
-    height: 85px;
-    top: 73px;
-    left: 1336px;
-  }
-  
-  .forside .text-wrapper {
-    position: absolute;
-    width: 457px;
-    top: 76px;
-    left: 0;
-    font-family: "Roboto-Bold", Helvetica;
-    font-weight: 700;
-    color: #000000;
-    font-size: 56px;
-    letter-spacing: -0.41px;
-    line-height: 69px;
-  }
-  
-  .forside .search {
-    position: absolute;
-    width: 676px;
-    height: 112px;
-    top: 61px;
-    left: 512px;
-    background-color: #ffffff;
-    border: 1px solid;
-    border-color: #1a191b;
-  }
-  
-  .forside .text {
-    position: absolute;
-    width: 524px;
-    top: 26px;
-    left: 111px;
-    font-family: "Abel-Regular", Helvetica;
-    font-weight: 400;
-    color: #1a191b;
-    font-size: 17px;
-    letter-spacing: -0.41px;
-    line-height: 22px;
-  }
-  
-  .forside .icon-search {
-    position: absolute;
-    width: 43px;
-    height: 56px;
-    top: 27px;
-    left: 39px;
-  }
-  
-  .forside .overlap-group {
-    position: absolute;
-    width: 1440px;
-    height: 99px;
-    top: 970px;
-    left: 0;
-  }
-  
-  .forside .rectangle-5 {
-    position: absolute;
-    width: 1440px;
-    height: 63px;
-    top: 1px;
-    left: 0;
-    background-color: #d9d9d9;
-  }
-  
-  .forside .p {
-    position: absolute;
-    width: 1046px;
-    top: 0;
-    left: 21px;
-    font-family: "Roboto-Bold", Helvetica;
-    font-weight: 700;
-    color: #000000;
-    font-size: 20px;
-    letter-spacing: -0.41px;
-    line-height: 69px;
-  }
-  
-  .forside .shoes {
-    position: absolute;
-    width: 333px;
-    height: 510px;
-    top: 332px;
-    left: 104px;
-    background-color: #ffffff;
-    border-radius: 8px;
-  }
-  
-  .forside .overlap-group-2 {
-    position: relative;
-    height: 510px;
-    border-radius: 8px;
-  }
-  
-  .forside .text-wrapper-2 {
-    position: absolute;
-    width: 273px;
-    top: 362px;
-    left: 30px;
-    font-family: "Roboto-Bold", Helvetica;
-    font-weight: 700;
-    color: #1a191b;
-    font-size: 36px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .forside .element {
-    position: absolute;
-    top: 434px;
-    left: 30px;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #1a191b;
-    font-size: 12px;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-  }
-  
-  .forside .media {
-    position: absolute;
-    width: 333px;
-    height: 338px;
-    top: 0;
-    left: 0;
-  }
-  
-  .forside .card-border {
-    position: absolute;
-    width: 333px;
-    height: 510px;
-    top: 0;
-    left: 0;
-    border-radius: 8px;
-    border: 1px solid;
-    border-color: #1a191b;
-  }
-  
-  .forside .pants {
-    position: absolute;
-    width: 333px;
-    height: 510px;
-    top: 332px;
-    left: 1002px;
-    background-color: #ffffff;
-    border-radius: 8px;
-  }
-  
-  .forside .sweaters {
-    position: absolute;
-    width: 333px;
-    height: 510px;
-    top: 332px;
-    left: 553px;
-    background-color: #ffffff;
-    border-radius: 8px;
-  }
+
+}
