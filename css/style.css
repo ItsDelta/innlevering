@@ -1,16 +1,13 @@
-/* Setter standard skrifttype for hele nettsiden */
 body {
   font-family: Arial;
   background-color: whitesmoke;
 }
 
-/* Definerer et grid-container som inneholder header, main og footer */
 #grid-container {
   display: grid;
   grid-template-areas: "header" "main" "footer";
 }
 
-/* Legger til litt padding til header, main og footer for mellomrom */
 header, main{
   padding: 0.5rem;
 }
@@ -23,7 +20,6 @@ footer {
   color: #000;
 }
 
-/* Styler header-seksjonen */
 header {
   font-size: 1rem;
   font-weight: 700;
@@ -31,15 +27,10 @@ header {
   background-color: #10217c;
 }
 
-
-
 a:link, a:visited {
   color: black;
   text-decoration: none
 }
-
-
-
 
 header nav {
   display: flex;
@@ -61,7 +52,7 @@ footer {
 }
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 650px) {
   #grid-container {
       grid-template-areas: "header header header" "main main main" "footer footer footer";
   }
@@ -100,6 +91,160 @@ footer {
 
   .produkt img {
       width: 50%;
+  }
+
+  .produkt section {
+      padding: 1rem;
+      width: 40%;
+      align-self: center;
+  }
+
+}
+
+
+@media only screen and (max-width: 1279px) and (min-width: 769px){
+  #grid-container {
+      grid-template-areas: "header header header" "main main main" "footer footer footer";
+  }
+
+  .navbar {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      list-style: none;
+      margin: 0;
+  }
+
+.produktkort {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #efefef;
+  justify-content: space-between;
+}
+
+.produktkort article {
+  max-width: 300px;
+  width: 100%;
+  min-width: 200px;
+  border: 3px rgba(237, 9, 9, 0.6) solid;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+  .produkt {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .produkt img {
+      width: 60%;
+  }
+
+  .produkt section {
+      padding: 1rem;
+      width: 40%;
+      align-self: center;
+  }
+
+}
+
+
+
+
+@media only screen and (max-width: 1919px) and (min-width: 1280px){
+  #grid-container {
+      grid-template-areas: "header header header" "main main main" "footer footer footer";
+  }
+
+  .navbar {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      list-style: none;
+      margin: 0;
+  }
+
+.produktkort {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #efefef;
+  justify-content: space-between;
+}
+
+.produktkort article {
+  max-width: 300px;
+  width: 100%;
+  min-width: 200px;
+  border: 3px rgba(255, 243, 243, 0.6) solid;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+  .produkt {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .produkt img {
+      width: 70%;
+  }
+
+  .produkt section {
+      padding: 1rem;
+      width: 40%;
+      align-self: center;
+  }
+
+}
+
+
+
+
+@media only screen and (min-width: 1920px) {
+  #grid-container {
+      grid-template-areas: "header header header" "main main main" "footer footer footer";
+  }
+
+  .navbar {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      list-style: none;
+      margin: 0;
+  }
+
+.produktkort {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #efefef;
+  justify-content: space-between;
+}
+
+.produktkort article {
+  max-width: 300px;
+  width: 100%;
+  min-width: 200px;
+  border: 3px rgba(255, 243, 243, 0.6) solid;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+  .produkt {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .produkt img {
+      width: 80%;
   }
 
   .produkt section {
