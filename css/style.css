@@ -403,9 +403,7 @@ main {
 }
 
 #message {
-    resize: none;
     height: 150px;
-    border: none;
 }
 
 #about-contact-us contact-us .button1-yellow {
