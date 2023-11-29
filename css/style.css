@@ -1,256 +1,718 @@
+
+/* Karakter C krav */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body {
-  font-family: Arial;
-  background-color: whitesmoke;
+  font-family: 'Roboto', sans-serif;
+  max-width: 1600px;
+  margin: auto;
+}
+
+/* Benyttet Denne: https://fonts.google.com/specimen/Roboto */
+
+html {
+    scroll-behavior: smooth;
 }
 
 #grid-container {
-  display: grid;
-  grid-template-areas: "header" "main" "footer";
+    width: 100%;
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
 }
 
-header, main{
-  padding: 0.5rem;
+a {
+    color: #252525;
+    text-decoration: none;
 }
 
-
-footer {
-  text-align: center;
-  padding: 5px;
-  background-color: #abbaba;
-  color: #000;
+ul {
+    list-style: none;
 }
 
-header {
-  font-size: 1rem;
-  font-weight: 700;
-  grid-area: header;
-  background-color: #10217c;
-}
-
-a:link, a:visited {
-  color: black;
-  text-decoration: none
-}
-
+/* header section */
 header nav {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
+/* Endrer plass imellom "home" "portfolio" og "contact" i navigasjon*/
+header nav li {
+    margin: 8px;
+}
+
+#index-header {
+    position: relative;
+}
+
+/* Endrer også img for portfolio  */
+#index-header img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+
+
+
+
+/* B Krav */
+
+/* Marker gjeldene side med en gul linje i navigasjon*/
+.link-hover-menu {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #e6bd43;
+    text-underline-offset: 0.2rem;
+    text-decoration-thickness: 2px;
+
+}
+
+/* Endrer farge når vi hover over knapper*/
+.button1-yellow {
+    display: inline-block;
+    background-color:  #e6bd43;
+    padding: 15px 20px;
+    color: #000;
+    font-weight: bold;
+}
+
+
+.gotopbtn
+{
+  position: fixed;
+  width: 50px;
+  height: 60px;
+  background: #252525;
+  bottom: 15px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  font-size: 25px;
+  
+}
+
+/* Kildehenvinsing:
+Benyttet CSS/HTML ifra denne nettsiden som viser hvordan du lager en stick button
+https://dev.to/atulcodex/scroll-to-top-button-with-just-html-css-1c2  
+*/
+
+
+
+
+
+/* Index page Overlay bilde
+Når nettsiden blir mindre enn 600px så går den over til et bilde overlay 
+*/
+
+video {
+    display: none;
+}
+
+#overlay {
+    position: absolute;
+    height: 380px;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    background-color: rgba(207, 226, 245, 0.7)
+}
+
+#overlay h1{
+    padding-top: 3rem;
+}
+
+
+/* portfolio-page Overlay */
+
+#overlay-products {
+    position: absolute;
+    height: 380px;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    background-color: rgba(225, 227, 230, 0.7)
+}
+
+
+/* Header text for products nettside : "Portfolio" */
+#products-heading {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding-top: 9rem;
+}
+
+
+
+
+/* about-page */
+
+#about-header {
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 4rem;
+    background-image:url("/img/computer-image.jpg");
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: auto;
+
+}
+
+
+
+#overlay-about {
+    position: relative;
+    text-align: left;
+    padding: 3rem;
+    background-color: rgba(245, 242, 242, 0.8);
+}
+
+#overlay-about h1 {
+    font-size: 1rem;
+    font-weight: lighter;
+    margin: 0;
+}
+
+#overlay-about p, #overlay-about h2 {
+    margin: 1rem 0;
+}
+
+/* main section */
 
 main {
-  grid-area: main;
+    grid-area: main;
 }
 
-main section img {
-  width: 100%;
+
+
+/* ***************************************************************/
+
+/* Index  Page*/
+
+/* ***************************************************************/
+
+
+#index-subheading {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+  #index-subheading p {
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+
+/* About Our Company*/
+#index-about-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #e6bd43;
+    align-items: center;
 }
+#index-about-section img {
+    width: 80%;
+    height: auto;
+    margin: 40px auto;
+}
+
+#index-about-section h3, #about p {
+    width: 50%;
+    margin: 1rem auto;
+}
+
+#index-about-section .button1-yellow {
+    display: block;
+    width: 40%;
+    margin: 2rem auto 5rem auto;
+    border: 2px solid;
+}
+
+
+
+/* Our Services Index */
+
+#index-services {
+    text-align: center;
+    margin: 3.5rem 0;;
+}
+
+
+#index-services i {
+    font-size: 40px;
+}
+
+#index-services p {
+    margin: 3rem auto;
+}
+
+
+/* Email Signup */
+
+#index-signup {
+    text-align: center;
+    background-color: #f4f1f1;
+    padding: 3rem;
+}
+
+#index-signup form {
+    display: flex;
+    justify-content: center;
+  }
+
+  #index-signup form input {
+    display: inline-block;
+    margin: 0;
+    border: 0;
+  }
+
+
+  #index-signup form button {
+    display: inline-block;
+    margin: 0;
+    border: 0;
+    padding: 0.90rem;
+  }
+
+  .sign-up-button {
+    background-color: #e6bd43;
+    padding: 0.5rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+/* ***************************************************************
+
+
+                            products-page 
+
+
+************************************************************** */
+
+
+
+
+.product-header {
+    margin-bottom: 3rem;
+}
+
+
+
+#category ul {
+    margin: 0;
+    padding: 1rem;
+  }
+#category ul li {
+    display: inline-block;
+    margin: 0 0.5rem 2rem 0;
+  }
+
+#category ul a {
+    border: 1px solid black;
+    padding: 0.75rem 0.5rem;
+  }
+
+
+
+.product-cards {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.product-cards article {
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-basis: 100%;
+    min-width: 200px;
+    max-width: 692px;
+}
+
+
+
+.product-cards img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ***************************************************************/
+
+
+/* about-page */
+
+/* ***************************************************************/
+
+
+#clients {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    background-color: #e6bd43;
+    padding-bottom: 2rem;
+}
+
+#clients h2 {
+    width: 100%;
+}
+
+#about-contact-us {
+    padding: 2rem;
+    background-color: #efefef;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#about-contact-us h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+    width: 90%;
+}
+
+#about-contact-us section {
+    width: 90%;
+    max-width: 490px;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+#name, #subject {
+    height: 40px;
+    border: none;
+}
+
+#message {
+    resize: none;
+    height: 150px;
+    border: none;
+}
+
+#about-contact-us contact-us .button1-yellow {
+    margin-bottom: 4rem;
+    border: none;
+    width: 150px;
+}
+
+#about-contact-us contact-us i {
+    margin: 10px 20px 10px 0;
+    color: grey
+}
+
+#about-contact-us contact-us p {
+    margin: 0 0 1rem 0;    
+}
+
+.mail {
+    color: blue;
+    text-decoration: underline;
+}
+
+iframe {
+    width: 100%;
+    height: 360px;
+    border: none;
+    display: block;
+    
+}
+
+/* footer section */
 
 footer {
-  grid-area: footer;
-}
-
-
-@media only screen and (min-width: 650px) {
-  #grid-container {
-      grid-template-areas: "header header header" "main main main" "footer footer footer";
-  }
-
-  .navbar {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-      list-style: none;
-      margin: 0;
-  }
-
-.produktkort {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: #efefef;
-  justify-content: space-between;
-}
-
-.produktkort article {
-  max-width: 300px;
-  width: 100%;
-  min-width: 200px;
-  border: 3px #00000099 solid;
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-  .produkt {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-  }
-
-  .produkt img {
-      width: 50%;
-  }
-
-  .produkt section {
-      padding: 1rem;
-      width: 40%;
-      align-self: center;
-  }
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #252525;
+    align-items: center;
 
 }
 
-
-@media only screen and (max-width: 1279px) and (min-width: 769px){
-  #grid-container {
-      grid-template-areas: "header header header" "main main main" "footer footer footer";
-  }
-
-  .navbar {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-      list-style: none;
-      margin: 0;
-  }
-
-.produktkort {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: #efefef;
-  justify-content: space-between;
+footer img {
+    width: auto;
+    height: auto;
+    margin-top: 20px;
 }
 
-.produktkort article {
-  max-width: 300px;
-  width: 100%;
-  min-width: 200px;
-  border: 3px rgba(237, 9, 9, 0.6) solid;
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
+footer p {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    
 }
 
-  .produkt {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-  }
+footer ul {
+    display: flex;
+    gap: 30px;
+}
 
-  .produkt img {
-      width: 60%;
-  }
+footer i {
+    font-size: 40px;
+    color: #fff;
+}
 
-  .produkt section {
-      padding: 1rem;
-      width: 40%;
-      align-self: center;
-  }
 
+@media only screen and (min-width: 1200px) {
+
+    /* products-page */
+
+    .product-header {
+        margin-left: 5rem;
+    }
+
+    #category ul {
+        margin: 4rem;
+    }
+
+    .product-cards article {
+        flex-basis: 40%;
+        margin: 1rem;
+    }
+
+    /* about-page */
+
+    #about-contact-us contact-us {
+        justify-content: space-around;
+    }
+
+    #about-contact-us .button1-yellow {
+        margin: 0;
+    }
 }
 
 
 
 
-@media only screen and (max-width: 1919px) and (min-width: 1280px){
-  #grid-container {
-      grid-template-areas: "header header header" "main main main" "footer footer footer";
-  }
+/* ***************************************************************
 
-  .navbar {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-      list-style: none;
-      margin: 0;
-  }
+        Media Query
 
-.produktkort {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: #efefef;
-  justify-content: space-between;
+        Har satt opp slik som i timen
+
+***************************************************************/
+
+
+ @media only screen and (min-width: 600px) {
+        #grid-container {
+            grid-template-areas: "header header header" "main main main" "footer footer footer";
+        }
+    
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 40px;
+        margin: 2rem auto;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 20px;
+        max-width: 900px;
+        margin: 2rem auto;
+    }
+
+    /* header desktop */
+
+    .button1-yellow:hover, .button1-yellow:hover a {
+        background-color: #000;
+        color:#e6bd43;
+    }
+
+    #category ul a:hover {
+        background-color: #e6bd43;
+        cursor: pointer;
+      }
+    
+
+    header {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    
+    header nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header ul {
+        display: flex;
+        align-items: center;
+    }
+
+    /* frontpage desktop  */
+    
+    #frontpage {
+        display: none;
+    }
+
+    video {
+        display: inline;
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+    }
+
+    #overlay {
+    position: absolute;
+    height: 380px;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    background-color: rgba(207, 226, 245, 0.7)
+
+    }
+
+    /* about-page desktop */
+
+    #about-header {
+        display: flex;
+        justify-content: right;
+    }
+
+    #overlay-about {
+        width: 50%;
+    }
+
+    #overlay-about h1 {
+        font-size: 20px;
+    }
+
+    /* main desktop */
+
+    main {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    article {
+        text-align: center;
+    }    
+
+    /* frontpage desktop */
+
+    #index-about-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    #index-about-section img {
+        width: 400px;
+  
+        margin: 3rem;
+    }
+
+    #index-about-section article {
+        width: auto;
+        max-width: 692px;
+    }
+
+    #index-about-section h3, #about p {
+        width: auto;
+        text-align: left;
+        margin: 2rem;
+    }
+
+    #index-about-section .button1-yellow {
+        margin: 3rem 4rem;
+        width: 25%;
+    }
+
+
+    /* Disse med "index-services" gjelder både for nettsiden Index og About desktop  */
+    #index-services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 4rem;
+    }
+
+    #index-services article {
+        width: 250px;
+        margin-top: 2rem;
+    }
+    
+    #index-services h2 {
+        width: 100%;
+        margin-top: 4rem;
+    }
+
+    #index-services h3 {
+        font-size: 20px;
+    }
+
+    #index-services p {
+        font-size: 16px;
+        margin: auto;
+    }
+    
+
+
+    #email-signup label {
+        font-size: 40px;
+        margin: 4rem auto 2rem auto;
+    }
+
+    /* products-page desktop  */
+
+    .product-header {
+        margin-left: 4rem; 
+    }
+    
+    .product-cards article:hover {
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.05);
+    }
+
+    /* footer desktop */
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0rem;
+        height: 230px;
+    }
 }
 
-.produktkort article {
-  max-width: 300px;
-  width: 100%;
-  min-width: 200px;
-  border: 3px rgba(255, 243, 243, 0.6) solid;
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-}
 
-  .produkt {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-  }
+/* ***************************************************************
 
-  .produkt img {
-      width: 70%;
-  }
+                                End 
 
-  .produkt section {
-      padding: 1rem;
-      width: 40%;
-      align-self: center;
-  }
-
-}
+***************************************************************/
 
 
 
 
-@media only screen and (min-width: 1920px) {
-  #grid-container {
-      grid-template-areas: "header header header" "main main main" "footer footer footer";
-  }
 
-  .navbar {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-      list-style: none;
-      margin: 0;
-  }
 
-.produktkort {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: #efefef;
-  justify-content: space-between;
-}
 
-.produktkort article {
-  max-width: 300px;
-  width: 100%;
-  min-width: 200px;
-  border: 3px rgba(255, 243, 243, 0.6) solid;
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-}
 
-  .produkt {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-  }
-
-  .produkt img {
-      width: 80%;
-  }
-
-  .produkt section {
-      padding: 1rem;
-      width: 40%;
-      align-self: center;
-  }
-
-}
